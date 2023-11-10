@@ -1,12 +1,10 @@
 'use strict';
 
-
 let votingRounds = 25;
 let productIndexArray = [];
 
 let imgElements = document.querySelectorAll('img');
 let imgContainer = document.querySelector('section');
-
 
 let state = new AppState();
 state.loadItems();
@@ -16,7 +14,6 @@ function generateRandomProduct() {
 }
 
 function renderProductImages() {
-
   while (productIndexArray.length < 6) {
     let randomProductIndex = generateRandomProduct();
     if (!productIndexArray.includes(randomProductIndex)) {
@@ -25,11 +22,10 @@ function renderProductImages() {
   }
 
   for (let i = 0; i < imgElements.length; i++) {
-    let randomIndex = productIndexArray.shift()
-
-    imgElements[i].src = state.allProducts[randomIndex].source
-    imgElements[i].title = state.allProducts[randomIndex].name
-    imgElements[i].alt = state.allProducts[randomIndex].name
+    let randomIndex = productIndexArray.shift();
+    imgElements[i].src = state.allProducts[randomIndex].source;
+    imgElements[i].title = state.allProducts[randomIndex].name;
+    imgElements[i].alt = state.allProducts[randomIndex].name;
     state.allProducts[randomIndex].timesShown++;
   }
 }
