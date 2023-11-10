@@ -10,6 +10,7 @@ The code creates an interactive voting system where users can click on their pre
 
 
 ### [Submission Link](https://github.com/StepheeGee/lab14-odd-duck.git)
+[PR Link](https://github.com/StepheeGee/lab14-odd-duck/pull/2)
 
 
 ### Lighthouse Accessibility Report Score
